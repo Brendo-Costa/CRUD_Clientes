@@ -18,15 +18,15 @@
             </div>
         </div>
 
-        <a href=""> 
-            <button type="submit" class="btn btn-success"> Criar </button>
-        </a>
-        
-        <a href="{% url 'cliente_listar' %}">
-            <button class='btn btn-warning' > Cancelar </button>
-        </a>
+        <button type="submit" class="btn btn-success"> Criar </button>
+
+        <button class='btn btn-warning' >
+            <a href="{% url 'cliente_listar' %}"> Cancelar </a>
+        </button>
 
     </form>
+
+    
 {% endblock %}
 
 

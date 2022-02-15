@@ -28,6 +28,8 @@ class ClienteUpdateView(UpdateView):
 
 
 class ClienteDeleteView(DeleteView):
-    pass
+    model = Cliente
+    template_name = 'Cadastro/excluir_elements.html'
+    success_url = reverse_lazy('cliente_listar')
 
 

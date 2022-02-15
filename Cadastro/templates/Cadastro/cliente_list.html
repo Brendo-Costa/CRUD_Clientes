@@ -14,6 +14,8 @@
             <th>CPF</th>
             <th>Telefone</th>
             <th>E-mail</th>
+            <th>Excluir</th>
+            <th>Alterar</th>
         </thead>
 
         <tbody>
@@ -25,10 +27,13 @@
                 <th>{{cliente.cpf}}</th>
                 <th>{{cliente.telefone}}</th>
                 <th>{{cliente.email}}</th>
+                
                 <th>
                     <button class="btn btn-warning">
-                        <a href="">Excluir</a>
+                        <a href="{% url 'cliente_deletar' cliente.id %}">Excluir</a>
                     </button>
+                </th>
+                <th>
                     <button class="btn btn-success">
                         <a href="{% url 'cliente_alterar' cliente.id %}">Alterar</a>
                     </button>
