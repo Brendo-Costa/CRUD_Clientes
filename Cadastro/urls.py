@@ -6,4 +6,5 @@ urlpatterns = [
     path('criar/', views.ClienteCreateView.as_view(), name='cliente_criar'),
     path('alterar/<int:pk>', views.ClienteUpdateView.as_view(), name='cliente_alterar'),
     path('deletar/<int:pk>', views.ClienteDeleteView.as_view(), name='cliente_deletar'),
+    path('busca/', views.Busca.as_view(), name='cliente_busca'),
 ]

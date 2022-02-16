@@ -7,25 +7,38 @@
 {% endblock %}
 
 {% block conteudo %}
-    <h1> Novo Cliente </h1>
 
-    <form method="post">
-        {% csrf_token %}
+    <div class='container w-100'>
+        <div class="row justify-content-center">
+            <div class="col-auto w-50">
 
-        <div class='form-row'>
-            <div class='form-group col-sm-6 col-md-4'>
-                {{ form | bootstrap }}
+                <h1> Novo Cliente </h1>
+
+                <form method="post">
+                    {% csrf_token %}
+        
+                    <div class='form'>
+                        <div class='form-group'>
+                            
+                          <p> {{ form | bootstrap }} </p>
+                            
+                        </div>
+                    </div>
+        
+                    <button type="submit" class="btn btn-dark">
+                        <a style="text-decoration: none;"> Criar </a>
+                    </button>
+        
+                    <button class='btn btn-dark' >
+                        <a href="{% url 'cliente_listar' %}" style="text-decoration: none; color: white;" > Cancelar </a>
+                    </button>
+        
+                </form>
+
             </div>
         </div>
-
-        <button type="submit" class="btn btn-success"> Criar </button>
-
-        <button class='btn btn-warning' >
-            <a href="{% url 'cliente_listar' %}"> Cancelar </a>
-        </button>
-
-    </form>
-
+       
+    </div>
     
 {% endblock %}
 
