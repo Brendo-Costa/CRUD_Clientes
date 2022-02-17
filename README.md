@@ -1,7 +1,9 @@
 
-<div>
+<div align='center'>
     <img src="https://user-images.githubusercontent.com/85007372/154411686-8e02d4cb-328c-44ba-bb82-829bff96015e.jpg" style="width: 604px; height: 514px;" alt="">
 <div>
+
+---
 
 ## Grupo Strategi
 ### CRUD Clientes
@@ -52,10 +54,6 @@ O software em questão foi desenvolvido como parte do teste admissional para atu
      ou 
      "nome do ambiente"/bin/activate
 ```
-- Para instalar o Django
-```html
-     pip install django
-````
 - Para instalar as dependências
 ```html
      pip install -r requirements.txt
@@ -68,5 +66,11 @@ O software em questão foi desenvolvido como parte do teste admissional para atu
 ```html
      python manage.py runserver
 ```
+
+### Autor
+
+<p> Aldenir Brendo da Silva Costa </p>
+<p> Bacharel em Ciências e Tecnologia - UFRN </p>
+<p> Engenheiro de Telecomunicações - UFRN </p>
 
 
