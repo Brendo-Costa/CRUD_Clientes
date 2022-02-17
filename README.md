@@ -68,6 +68,7 @@ O software em questão foi desenvolvido como parte do teste admissional para atu
 ```html
      python manage.py runserver
 ```
+---
 
 ### Autor
 
