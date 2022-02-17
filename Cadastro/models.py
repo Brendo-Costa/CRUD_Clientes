@@ -7,7 +7,7 @@ class Cliente(models.Model):
     cpf = models.CharField(max_length=11, blank=False, unique=True)
     email = models.EmailField(max_length=100)
     telefone = models.CharField(max_length=11, blank=False, null=False, unique=True)
-
+    foto = models.ImageField(blank=True, upload_to='fotos/%Y/%m/')
     
     def __str__(self):
         return self.nome
