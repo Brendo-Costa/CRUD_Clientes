@@ -9,8 +9,23 @@
     
     <div class="row mt-3" >
 
-        <div class='col-sm-6'>
+        <div class='col-sm-4'>
            <h2> Gerenciar Clientes </h2>
+        </div>
+
+        <div class="col-sm-2 dropdown">
+            <a class="btn btn-dark dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Filtrar por 
+            </a>
+          
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+
+              <a class="dropdown-item" href="{% url 'cliente_last1' %}">último dia</a>
+              <a class="dropdown-item" href="{% url 'cliente_last7' %}">últimos 7 dias</a>
+              <a class="dropdown-item" href="{% url 'cliente_last30' %}">últimos 30 dias</a>
+              <a class="dropdown-item" href="{% url 'cliente_last60' %}">últimos 60 dias</a>
+
+            </div>
         </div>
 
         <div class='col-md-auto'> 
