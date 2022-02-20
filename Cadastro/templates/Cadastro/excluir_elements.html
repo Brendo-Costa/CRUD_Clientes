@@ -6,18 +6,18 @@
 
 
 {% block conteudo %}
-
+<div class="container">
     <form method='post'>
 
         {% csrf_token %}
         <p>Tem certeza qie deseja excluir o cliente: {{cliente.nome}} ?</p>
 
-        <button type="submit" class='btn btn-success'>Confirmar</button>
+        <button type="submit" class='btn btn-dark'>Confirmar</button>
        
-        <button class='btn btn-danger'>
-            <a href="{% url 'cliente_listar' %}" style="text-decoration: none;"> Cancelar </a>
+        <button class='btn btn-dark'>
+            <a href="{% url 'cliente_listar' %}" style="text-decoration: none; color: white;"> Cancelar </a>
         </button>
 
     </form>
-
+</div>
 {% endblock %}

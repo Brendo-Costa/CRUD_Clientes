@@ -14,6 +14,7 @@ class ClienteListView(ListView):
     model = Cliente
     queryset = Cliente.objects.order_by('nome')
     context_object_name = 'clientes'
+    paginate_by = 10
     
 
 class Busca(ClienteListView):
@@ -48,13 +49,15 @@ class last1(ClienteListView):
         
         data_inicio = date.today()
         data_fim = (data_inicio - timedelta(days=1))
-
+        
         queryset = queryset.filter(
             criado__range=(
-                data_inicio, data_fim
+                data_fim, data_inicio
             )
         )
         print(queryset)
+        print(data_inicio)
+        print(data_fim)
 
         return queryset
 
@@ -69,7 +72,7 @@ class last7(ClienteListView):
 
         queryset = queryset.filter(
             criado__range=(
-                data_inicio, data_fim
+                data_fim, data_inicio
             )
         )
 
@@ -86,7 +89,7 @@ class last30(ClienteListView):
 
         queryset = queryset.filter(
             criado__range=(
-                data_inicio, data_fim
+                data_fim, data_inicio
             )
         )
 
@@ -103,7 +106,7 @@ class last60(ClienteListView):
 
         queryset = queryset.filter(
             criado__range=(
-                data_inicio, data_fim
+                data_fim, data_inicio
             )
         )
 
