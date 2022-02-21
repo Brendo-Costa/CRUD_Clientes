@@ -1,11 +1,5 @@
 
-<p align="center">
-    <img src="https://user-images.githubusercontent.com/85007372/154411686-8e02d4cb-328c-44ba-bb82-829bff96015e.jpg" style="width: 604px; height: 514px;">
-</p>
-
 ---
-
-## Grupo Strategi
 ### CRUD Clientes
 
 ---
@@ -21,7 +15,7 @@
 ---
 
 ### Description
-O software em questão foi desenvolvido como parte do teste admissional para atuar como Desenvolvedor Backend no Grupo Strategi. Trata-se de um CRUD para cadastrar clientes, usando CBV do Django para criar as views necessárias. Html, Css e Bootstrap foram usados para marcar e estilizar o projeto, que buscou ser fiel ao teste proposto ao máximo. 
+O software em questão foi desenvolvido como parte do teste admissional para atuar como Desenvolvedor Backend. Trata-se de um CRUD para cadastrar clientes, usando CBV do Django para criar as views necessárias. Html, Css e Bootstrap foram usados para marcar e estilizar o projeto, que buscou ser fiel ao teste proposto ao máximo. 
 
 ---
 

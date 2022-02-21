@@ -9,12 +9,6 @@ from datetime import timedelta, date
 
 # Create your views here.
 
-# Criação de todas as views usadas no projeto. Em todos, são usados classes, herdando de classes específicas do Django para cada aplicação.
-# Classe Based Views - Listar, Deletar, Criar, Alterar são usadas no projeto. 
-# Basicamente a view é a encarregada de abstrair a ação da página
-
-
-# Lista 10 objetos e renderiza
 class ClienteListView(ListView):
     template_name = 'Cadastro/cliente_list.html'
     model = Cliente
@@ -23,7 +17,6 @@ class ClienteListView(ListView):
     paginate_by = 10
     
 
-# Busca objetos, e renderiza
 class Busca(ClienteListView):
     def get_queryset(self, *args, **kwargs):
         termo = self.request.GET.get('termo')
@@ -49,7 +42,6 @@ class Busca(ClienteListView):
         return queryset
 
 
-# Busca os objetos criados até o último dia
 class last1(ClienteListView):
     def get_queryset(self, *args, **kwargs):
 
@@ -70,7 +62,6 @@ class last1(ClienteListView):
         return queryset
 
 
-# Busca os objetos criados até os 7 últimos dias
 class last7(ClienteListView):
     def get_queryset(self, *args, **kwargs):
 
@@ -88,7 +79,6 @@ class last7(ClienteListView):
         return queryset
 
 
-# Busca os objetos criados até os 30 últimos dias
 class last30(ClienteListView):
     def get_queryset(self, *args, **kwargs):
 
@@ -106,7 +96,6 @@ class last30(ClienteListView):
         return queryset
 
 
-# Busca os objetos criados até os 60 últimos dias
 class last60(ClienteListView):
     def get_queryset(self, *args, **kwargs):
 
@@ -124,7 +113,6 @@ class last60(ClienteListView):
         return queryset
 
 
-# Cria um novo objeto
 class ClienteCreateView(CreateView):
     model = Cliente
     template_name = 'Cadastro/cliente_form.html'
@@ -132,7 +120,6 @@ class ClienteCreateView(CreateView):
     success_url = reverse_lazy('cliente_listar')
 
 
-# Altera um objeto selecionado por ID
 class ClienteUpdateView(UpdateView):
     model = Cliente
     template_name = 'Cadastro/cliente_alterar.html'
@@ -140,7 +127,6 @@ class ClienteUpdateView(UpdateView):
     success_url = reverse_lazy('cliente_listar')
 
 
-# Deleta um objeto selecionado por ID
 class ClienteDeleteView(DeleteView):
     model = Cliente
     template_name = 'Cadastro/excluir_elements.html'

@@ -1,8 +1,6 @@
 from django.urls import path
 from . import views
 
-# Criação de todas as rotas presentes no projeto. Onde representam o caminho referente a view que abstraia a ação em si que usuário
-# deseja realizar.
 
 urlpatterns = [
     path('', views.ClienteListView.as_view(), name='cliente_listar'),

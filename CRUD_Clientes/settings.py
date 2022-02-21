@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Cadastro de Apps usadas aqui
     'Cadastro',
     'crispy_forms',
     'bootstrapform',
@@ -58,7 +57,6 @@ ROOT_URLCONF = 'CRUD_Clientes.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        #V Vinculo de busca de templates na página 'templates'
         'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {

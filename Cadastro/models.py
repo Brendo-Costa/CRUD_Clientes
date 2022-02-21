@@ -3,8 +3,6 @@ from datetime import datetime, date
 
 # Create your models here.
 
-# Criação do modelo representando a entidade que eu desejo modelar. No caso, é um cadastro de clientes, com os campos a baixo.
-
 class Cliente(models.Model):
     nome = models.CharField(max_length=30, blank=False, null=False)
     sobrenome = models.CharField(max_length=30, blank=False, null=False)
